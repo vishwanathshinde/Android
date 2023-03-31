@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/img_manus"
+        android:id="@+id/image"
+        />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/image"
+        android:text="create contact" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b1"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/image"
+        android:text="Update existing" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/image"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/call"
+        android:drawablePadding="30dp"
+        android:drawableRight="@drawable/contact" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/tv1"
+        android:background="@color/teal_200"
+        android:drawableLeft="@drawable/call"
+        android:drawableRight="@drawable/contact"
+        android:text="Hello Manus" />
+
+</RelativeLayout>

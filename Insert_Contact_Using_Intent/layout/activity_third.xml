@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="240dp"
+        android:background="@color/teal_200"
+        >
+
+        <ImageView
+            android:layout_width="165dp"
+            android:layout_height="150dp"
+            android:background="#FF868686"
+            android:src="@drawable/img_manus"
+            android:id="@+id/image"
+            />
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="create contact"
+            android:backgroundTint="#FF868686"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="Update existing"
+            android:backgroundTint="#FF868686"/>
+
+        <ImageButton
+            android:id="@+id/call"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/image"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:background="#FF868686"
+            android:src="@drawable/call"
+            android:contentDescription="DaabNa"/>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/image"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/call"
+            android:background="@color/teal_200"
+            android:src="@drawable/blackline" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:background="#FF868686"
+            android:src="@drawable/contact"
+            android:id="@+id/contact"
+            android:layout_below="@+id/image"
+            android:layout_toRightOf="@+id/line"
+            android:layout_marginTop="15dp"
+            android:contentDescription="DaabNa"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/image"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/contact"
+            android:background="@color/teal_200"
+            android:src="@drawable/blackline" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:background="@color/teal_200"
+        android:layout_marginTop="3dp" >
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/teal_200"
+            android:padding="5dp"
+            android:text="Mobile : \n(650)253-0000"
+            android:textSize="20sp"
+            android:id="@+id/tv1"/>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_toRightOf="@+id/tv1"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="46dp"
+            android:background="#FF868686"
+            android:src="@drawable/call"
+            android:id="@+id/call2"
+            android:contentDescription="DaabNa"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/call2"
+            android:background="@color/teal_200"
+            android:src="@drawable/blackline"
+            android:id="@+id/line2"
+            />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:background="#FF868686"
+            android:src="@drawable/message"
+            android:layout_toRightOf="@+id/line2"
+            android:layout_marginTop="5dp"
+            android:contentDescription="DaabNa"
+            android:id="@+id/message2"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
