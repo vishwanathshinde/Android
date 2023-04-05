@@ -46,21 +46,21 @@ public class New extends Activity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(New.this, "Nako Re Dabu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(New.this, "Nako Dabu", Toast.LENGTH_SHORT).show();
             }
         });
 
         call2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(New.this, "Nako Na", Toast.LENGTH_SHORT).show();
+                Toast.makeText(New.this, "Make Call", Toast.LENGTH_SHORT).show();
             }
         });
 
         message2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(New.this, "Are Nako Re", Toast.LENGTH_SHORT).show();
+                Toast.makeText(New.this, "Send Message", Toast.LENGTH_SHORT).show();
             }
         });
     }
