@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+   <Button
+       android:id="@+id/btnSave"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Save"
+       android:textSize="20sp" />
+
+   <Button
+       android:id="@+id/btnOpen"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="open"
+       android:textSize="20sp" />
+
+   <ImageButton
+       android:id="@+id/btnImg1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:contentDescription="imageView"
+       android:src="@mipmap/ic_launcher" />
+
+   <EditText
+       android:id="@+id/txtName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Write Name"
+       android:textSize="20sp" />
+
+   <CheckBox
+       android:id="@+id/chkAutosave"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:checked="false"
+       android:paddingLeft="10dp"
+       android:text="AutoSave"
+       android:textSize="20sp" />
+
+   <CheckBox
+       android:id="@+id/star"
+       style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:checked="false"
+       android:text="Don't Save"
+       android:textSize="20sp" />
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:background="@color/black"/>
+
+   <RadioGroup
+       android:id="@+id/rdbGp1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+      <RadioButton
+          android:id="@+id/rdb1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="10dp"
+          android:text="Vertical"
+          android:textSize="20sp" />
+
+      <RadioButton
+          android:id="@+id/rdb2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="10dp"
+          android:text="Horizontal"
+          android:textSize="20sp" />
+   </RadioGroup>
+
+   <ToggleButton
+       android:id="@+id/toggle1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:textSize="20sp" />
+</LinearLayout>
