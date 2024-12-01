@@ -1,59 +1,55 @@
 package com.example.practice_app;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.Cursor;
+import android.content.Context;
+import android.content.ContentValues;
 
-import androidx.annotation.Nullable;
-
-public class DBHelper extends SQLiteOpenHelper {
-    public DBHelper(Context context) {
-        super(context, "EmployeeDB", null, 1);
+public class DBHelper extends SQLiteOpenHelper{
+    public DBHelper(Context context){
+        super(context, "ConferenceDB", null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        String CREATE_TABLE_QUERY = "CREATE TABLE employee(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, dept TEXT, salary TEXT)";
-        db.execSQL(CREATE_TABLE_QUERY);
+    public void onCreate(SQLiteDatabase db){
+        db.execSQL("CREATE TABLE student (id INTEGER PRIMARY KEY, name TEXT, topic TEXT)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS employee");
-        onCreate(db);
+    public void onUpgrade(SQLiteDatabase db, int ov, int nv){
     }
 
-    public boolean registerEmployee(String name, String dept, String salary){
+    public boolean insertStudent(String id, String name, String topic){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("name",name);
-        contentValues.put("dept",dept);
-        contentValues.put("salary",salary);
+        ContentValues cv = new ContentValues();
 
-        long result = db.insert("employee",null,contentValues);
+        cv.put("id",id);
+        cv.put("name", name);
+        cv.put("topic", topic);
+
+        long result = db.insert("student", null, cv);
         return result != -1;
     }
 
-    public Cursor getAllData() {
+    public Cursor displayData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.rawQuery("SELECT * FROM employee", null);
+        return db.rawQuery("SELECT * FROM student", null);
     }
 
-    public boolean updateEmployee(String name, String dept, String salary) {
+    public boolean updateStudent(String id, String name, String topic){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("name", name);
-        contentValues.put("dept", dept);
-        contentValues.put("salary", salary);
+        ContentValues cv = new ContentValues();
 
-        // Update the record and return true if at least one row was updated
-        return db.update("employee", contentValues, "name = ?", new String[]{name}) > 0;
+        cv.put("id",id);
+        cv.put("name",name);
+        cv.put("topic",topic);
+
+        return db.update("student", cv, "id = ?", new String[]{id})>0;
     }
 
-    public boolean deleteEmployee(String name) {
+    public boolean deleteStudent(String id){
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete("employee", "name = ?", new String[]{name}) > 0;
+        return db.delete("student", "id = ?" , new String[]{id})>0;
     }
 }
